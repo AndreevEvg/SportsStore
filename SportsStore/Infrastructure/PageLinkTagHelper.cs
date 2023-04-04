@@ -19,7 +19,7 @@ public class PageLinkTagHelper : TagHelper
     
     [ViewContext]
     [HtmlAttributeNotBound]
-    private  ViewContext ViewContext { get; set; }
+    public ViewContext ViewContext { get; set; }
     
     public PagingInfo PageModel { get; set; }
     
