@@ -15,6 +15,9 @@ public class ProductController : Controller
         repository = repo;
     }
 
+    [Route("")]
+    [Route("Product")]
+    [Route("Product/List/{id?}")]
     public ViewResult List(int productPage = 1) 
         => View(new ProductsListViewModel 
         {

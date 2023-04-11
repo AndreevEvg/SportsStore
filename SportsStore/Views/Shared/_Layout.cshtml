@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="~/SportsStore.styles.css" asp-append-version="true"/>
 </head>
 <body>
-<div>
-    @RenderBody()
+<div class="row m-1 p-1">
+    <div class="navbar navbar-inverse bg-inverse" role="navigation">
+        <a class="navbar-brand" href="#">SPORST STORE</a>
+    </div>
+    <div id="categories" class="col-3">
+        Put something useful here later
+    </div>
+    <div class="col-9">
+        @RenderBody()
+    </div>
 </div>
 
 <footer class="border-top footer text-muted">
