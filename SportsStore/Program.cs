@@ -49,6 +49,30 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: null,
+    pattern: "{category}/Page{productPage:int}",
+    defaults: new { controller = "Product", action = "List" }
+);
+
+app.MapControllerRoute(
+    name: null,
+    pattern: "Page{productPage:int}",
+    defaults: new { controller = "Product", action = "List", productPage = 1 }
+);
+
+app.MapControllerRoute(
+    name: null,
+    pattern: "{category}",
+    defaults: new { controller = "Product", action = "List", productPage = 1 } 
+);
+
+app.MapControllerRoute(
+    name: null,
+    pattern: "",
+    defaults: new { controller = "Product", action = "List", productPage = 1 }
+);
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Product}/{action=List}/{id?}");
 
